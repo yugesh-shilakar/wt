@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo Classes & Pseudo Elements</title>
+    <style>
+        p {width: 100ch;}
+
+        /* Pseudo Classes */
+        a:hover {color: rgb(30, 255, 0);}
+
+        #name:focus {color: rgb(49, 1, 53);}
+
+        /* Pseudo Elements */
+        a::before {content: '🔗';}
+
+        p::first-letter {font-size: 24px;}
+
+        p::selection {color: rgb(46, 0, 250); background: green;}
+    </style>
+</head>
+<body>
+    <form>
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <input type="text" name="name" id="name">
+        <p>Hello World</p>
+    </form>
+</body>
+</html>
