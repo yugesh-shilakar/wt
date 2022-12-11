@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGEX</title>
+</head>
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #form {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 10px; 
+    }
+
+    #form div {
+        display: flex;
+        justify-content: space-between;
+        margin: 16px 0;
+    }
+
+    .error:focus{
+        outline-color: red;
+    }
+
+</style>
+<body>
+    <form id="form" onsubmit="return validateform()">
+        <div id="message" style="color: red;"></div>
+
+        <div>
+            Username: <input type="text" id="username" name="username" placeholder="(a-z,A-z,0-9)" onkeyup="validateform()">
+        </div>
+
+        <div>
+            Email: <input type="text" id="email" name="email" placeholder="(example@someone.com)" onkeyup="validate_email()">
+        </div>
+
+        <div>
+            Password: <input type="password" name="password" id="password" required>
+        </div>
+
+        <div>
+            <input type="submit" value="Signup">
+        </div>
+    </form>
+<script src="/js/regex.js"></script>
+
+ 
+
+</body>
+</html>
+
+</html>

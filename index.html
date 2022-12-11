@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex</title>
+</head>
+<body>
+    <form onsubmit="return validateform()">
+        <div id="message" style="color: red;"></div>
+        <div>
+            Username: <input type="text" id="username" name="username" placeholder="(max 6 digit; only digit)" onkeyup="validateform()">
+        </div>
+
+        <div>
+            Password: <input type="password" name="password" id="password">
+        </div>
+
+        <div>
+            <input type="submit" value="Signup">
+        </div>
+    </form>
+
+
+    <script type="text/javascript">
+        const regex_un=/^[0-9]{1,6}$/;	
+        function validateform() {
+            var usernameElement = document.forms[0].elements[0];
+            var un=usernameElement.value;
+            var is_valid=regex_un.test(un);
+            if(is_valid === false){
+                usernameElement.style.border='1px solid red';
+                document.getElementById('message').innerHTML='Error';
+            }
+            else{
+                usernameElement.style.border='';
+                document.getElementById('message').innerHTML='';
+                
+            }
+            return false;
+          
+        }
+    </script>
+
+</body>
+</html>
